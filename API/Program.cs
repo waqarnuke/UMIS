@@ -18,7 +18,10 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngular", builder =>
     {
-        builder.WithOrigins("http://localhost:4200","https://localhost:4200") // Update with your Angular app's domain
+        builder.WithOrigins("http://localhost:4200",
+                            "https://localhost:4200",
+                            "https://salmon-sea-084feb210.4.azurestaticapps.net"
+                            ) // Update with your Angular app's domain
             .AllowAnyHeader()
             .AllowAnyMethod()
             .AllowCredentials(); // Allows sending cookies
