@@ -56,7 +56,7 @@ if (app.Environment.IsDevelopment())
 //     .WithOrigins("http://localhost:4200","https://localhost:4200"));
 
 app.UseCors("AllowAngular");
-
+app.UseCookiePolicy();
 app.UseAuthentication();
 app.UseAuthorization();
 
